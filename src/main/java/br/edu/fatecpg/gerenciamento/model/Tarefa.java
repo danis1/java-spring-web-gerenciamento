@@ -1,0 +1,54 @@
+package br.edu.fatecpg.gerenciamento.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+
+@Entity
+public class Tarefa {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
+    private String descricao;
+
+    private Boolean concluida = false;
+
+    @Min(1)
+    @Max(5)
+    private Integer prioridade;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public Boolean getConcluida() {
+        return concluida;
+    }
+
+    public void setConcluida(Boolean concluida) {
+        this.concluida = concluida;
+    }
+
+    public Integer getPrioridade() {
+        return prioridade;
+    }
+
+    public void setPrioridade(Integer prioridade) {
+        this.prioridade = prioridade;
+    }
+}
