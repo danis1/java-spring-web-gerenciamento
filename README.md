@@ -43,9 +43,6 @@ Atualiza descrição, status e prioridade da tarefa. Retorna **200 OK** com a ta
 `DELETE /tarefas/{id}`
 Remove a tarefa. Retorna **204 No Content** ou **404 Not Found** se o id não existir.
 
-## Testes
-Todos os endpoints foram testados no Postman: criação, listagem, busca por id, atualização e exclusão de tarefas, incluindo o teste da validação da prioridade.
-
 ## Como rodar
 1. Criar o banco no PostgreSQL com o nome configurado em `application.properties`.
 2. Ajustar usuário e senha em `src/main/resources/application.properties`.
